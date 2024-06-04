@@ -1,0 +1,842 @@
+{
+	"info": {
+		"_postman_id": "357ad9d4-2cf3-479b-861b-fc4891d7e206",
+		"name": "Paticas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33648098"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/test",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Get All Pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/pets/21",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"pets",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pets by shelter id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/pets/shelter/1?page=0&size=5&sort=desc",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"pets",
+								"shelter",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/profileImage.png"
+								},
+								{
+									"key": "imageCarousel1",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel1.png"
+								},
+								{
+									"key": "imageCarousel2",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel2.png"
+								},
+								{
+									"key": "imageCarousel3",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel3.png"
+								},
+								{
+									"key": "name",
+									"value": "Carmilla",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "My house",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "2015-05-04",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "My species",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "My description",
+									"type": "text"
+								},
+								{
+									"key": "goodWithKids",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "goodWithDogs",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "goodWithCats",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "shelterId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/pets",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+								},
+								{
+									"key": "imageCarousel1",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel1.png"
+								},
+								{
+									"key": "imageCarousel2",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+								},
+								{
+									"key": "imageCarousel3",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel3.png"
+								},
+								{
+									"key": "name",
+									"value": "Carmilla",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "My house",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "2015-05-04",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "My species",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "My description",
+									"type": "text"
+								},
+								{
+									"key": "goodWithKids",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "goodWithDogs",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "goodWithCats",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "shelterId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/pets/22",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"pets",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+								},
+								{
+									"key": "imageCarousel1",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel1.png"
+								},
+								{
+									"key": "imageCarousel2",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+								},
+								{
+									"key": "imageCarousel3",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel3.png"
+								},
+								{
+									"key": "name",
+									"value": "Carmilla",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "My house",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "2015-05-04",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "My species",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "My description",
+									"type": "text"
+								},
+								{
+									"key": "goodWithKids",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "goodWithDogs",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "goodWithCats",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "shelterId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/pets/22",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"pets",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shelter",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/shelters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"shelters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/shelters/1",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"shelters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get volunteers by shelter id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/pets/shelter/1?page=0&size=5&sort=desc",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"pets",
+								"shelter",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"profileImage\": \"Fake image\",\r\n  \"name\": \"Shelter 2\",\r\n  \"location\": \"Location 2\",\r\n  \"description\": \"Description 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/shelters",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"shelters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\":3,\r\n  \"profileImage\": \"Fake image re modified\",\r\n  \"name\": \"Shelter 2 modified\",\r\n  \"location\": \"Location 2 modified\",\r\n  \"description\": \"Description 2 modified\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/shelters/2",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"shelters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+								},
+								{
+									"key": "imageCarousel1",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel1.png"
+								},
+								{
+									"key": "imageCarousel2",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+								},
+								{
+									"key": "imageCarousel3",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel3.png"
+								},
+								{
+									"key": "name",
+									"value": "Carmilla",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "My house",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "2015-05-04",
+									"type": "text"
+								},
+								{
+									"key": "species",
+									"value": "My species",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "My description",
+									"type": "text"
+								},
+								{
+									"key": "goodWithKids",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "goodWithDogs",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "goodWithCats",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "shelterId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/shelters/3",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"shelters",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Volunteers",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/volunteers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"volunteers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/volunteers/1",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"volunteers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel1.png"
+								},
+								{
+									"key": "fullName",
+									"value": "Pablo Muñoz Martínez",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "my@email.com",
+									"type": "text"
+								},
+								{
+									"key": "availability",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "shelterId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/volunteers",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"volunteers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel3.png"
+								},
+								{
+									"key": "fullName",
+									"value": "Pablo Muñoz Martínez RE",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123456789 re",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "my@email.com re",
+									"type": "text"
+								},
+								{
+									"key": "availability",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "shelterId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/volunteers/5",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"volunteers",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/volunteers/3",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"volunteers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BasePathApiReal",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}
