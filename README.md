@@ -1,33 +1,32 @@
 # Paticas API
 
-Paticas API is a RESTful web service for managing pets and shelters. It supports CRUD operations for pets, shelters, and volunteers. The API also provides file upload functionality for managing pet images.
-
-## Table of contents
+Paticas API es un servicio web RESTful para la gestión de mascotas y refugios. Soporta operaciones CRUD para mascotas, refugios y voluntarios. La API también proporciona funcionalidad de carga de archivos para gestionar imágenes de mascotas.
+## Tabla de contenidos
 
 - [Paticas API](#paticas-api)
-  - [Table of contents](#table-of-contents)
+  - [Tabla de contenidos](#tabla-de-contenidos)
   - [Features](#features)
-  - [Technologies Used](#technologies-used)
+  - [Tecnologías Usadas](#tecnologías-usadas)
   - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
+    - [Prerrequisitos](#prerrequisitos)
     - [Setup](#setup)
-  - [API Documentation](#api-documentation)
+  - [Documentación de la API](#documentación-api)
   - [Endoints](#endoints)
     - [Pets](#pets)
     - [Shelters](#shelters)
     - [Volunteers](#volunteers)
-  - [Contributing](#contributing)
+
 
 ## Features
 
-- CRUD operations for Pets
-- CRUD operations for Shelters
-- CRUD operations for Volunteers
-- File upload for pet images
-- Pagination and filtering for pets
-- Swagger documentation
+- Operaciones CRUD para Pets
+- Operaciones CRUD para Shelters
+- Operaciones CRUD para Volunteers
+- Subida de imágenes de Pets
+- Filtrado y paginado por Pets
+- Documentación Swagger
 
-## Technologies Used
+## Tecnologías Usadas
 
 - Java
 - Spring Boot
@@ -36,27 +35,25 @@ Paticas API is a RESTful web service for managing pets and shelters. It supports
 - MySQL
 - Gradle
 - Swagger
-- Docker
 
 ## Getting Started
 
-### Prerequisites
+### Prerrequisitos
 
-- Java 11 or higher
+- Java 11 o superior
 - MySQL
-- Docker (optional)
 - Gradle
 
 ### Setup
 
-1. Clone the repository:
+1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/yourusername/paticas-api.git
+git clone https://github.com/mychemicalEli/paticas-api.git
 cd paticas-api
 ```
 
-2. Set up the MySQL database:
+2. Configurar la base de datos en MySQL:
 
   ```yml
 # Use root/example as user/password credentials
@@ -92,13 +89,7 @@ volumes:
   db_data:
    ```
 
-3. Build and run the services:
-
-```bash
-docker-compose up --build
-```
-
-4. Configure the `application.properties` file:
+3. Configurar el archivo `application.properties`:
 
 ```properties
 # Application properties
@@ -125,15 +116,15 @@ spring.servlet.multipart.max-request-size=10MB
 file.upload-dir=/path/to/upload/dir/
 ```
 
-4. Build and run the application:
+4. Ejecutar la aplicación:
 
 ```bash
 ./gradlew bootRun
 ```
 
-## API Documentation
+## Documentación API
 
-The API documentation is available via Swagger. After starting the application, navigate to [Swagger](http://localhost:8081/swagger-ui.html):
+La  documentación de la API está disponible via Swagger. Tras compilar la aplicación, navegar a  [Swagger](http://localhost:8081/swagger-ui.html):
 
 ```json
 "url": "http://localhost:8081/swagger-ui.html"
@@ -165,7 +156,3 @@ The API documentation is available via Swagger. After starting the application, 
 - POST /api/volunteers: Create a new volunteer
 - PUT /api/volunteers/{id}: Update a volunteer by ID
 - DELETE /api/volunteers/{id}: Delete a volunteer by ID
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request. I tried to use Git flow, PRs and  [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
