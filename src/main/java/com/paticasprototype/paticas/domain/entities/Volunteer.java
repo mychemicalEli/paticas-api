@@ -2,8 +2,6 @@ package com.paticasprototype.paticas.domain.entities;
 
 import jakarta.persistence.*;
 
-
-
 @Entity
 public class Volunteer {
     @Id
@@ -21,6 +19,8 @@ public class Volunteer {
     private Shelter shelter;
 
     // Getters and Setters
+
+    // Método para el ID
     public Long getId() {
         return id;
     }
@@ -29,6 +29,7 @@ public class Volunteer {
         this.id = id;
     }
 
+    // Método para la imagen de perfil
     public String getProfileImage() {
         return profileImage;
     }
@@ -37,6 +38,7 @@ public class Volunteer {
         this.profileImage = profileImage;
     }
 
+    // Método para el nombre completo
     public String getFullName() {
         return fullName;
     }
@@ -45,6 +47,7 @@ public class Volunteer {
         this.fullName = fullName;
     }
 
+    // Método para el número de teléfono
     public String getPhone() {
         return phone;
     }
@@ -53,6 +56,7 @@ public class Volunteer {
         this.phone = phone;
     }
 
+    // Método para el correo electrónico
     public String getEmail() {
         return email;
     }
@@ -61,6 +65,7 @@ public class Volunteer {
         this.email = email;
     }
 
+    // Método para la disponibilidad
     public int getAvailability() {
         return availability;
     }
@@ -69,6 +74,7 @@ public class Volunteer {
         this.availability = availability;
     }
 
+    // Método para obtener el refugio asociado
     public Shelter getShelter() {
         return shelter;
     }

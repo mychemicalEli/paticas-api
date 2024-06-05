@@ -6,25 +6,37 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.Date;
 
 public class UpdatePetRequest {
+    // Atributo para el ID de la mascota
     private Long id;
+
+    // Atributos para las imágenes de la mascota
     private MultipartFile profileImage;
     private MultipartFile imageCarousel1;
     private MultipartFile imageCarousel2;
     private MultipartFile imageCarousel3;
+
+    // Atributos para la información de la mascota
     private String name;
     private String location;
     private String gender;
     private int size;
+
+    // Atributo para la fecha de nacimiento de la mascota, con formato específico
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthDate;
+
     private String species;
     private String description;
+
+    // Atributos booleanos para características de la mascota
     private boolean goodWithKids;
     private boolean goodWithDogs;
     private boolean goodWithCats;
+
+    // Atributo para el ID del refugio
     private Long shelterId;
 
-    // Getters and Setters
+    // Getters y Setters para cada atributo
 
     public Long getId() {
         return id;

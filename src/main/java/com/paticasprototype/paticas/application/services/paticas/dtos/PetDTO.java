@@ -1,14 +1,20 @@
 package com.paticasprototype.paticas.application.services.paticas.dtos;
+
 import com.paticasprototype.paticas.application.services.shelters.dtos.ShelterDTO;
 
 import java.util.Date;
 
 public class PetDTO {
+    // Atributo para el ID de la mascota
     private Long id;
+
+    // Atributos para las imágenes de la mascota
     private String profileImage;
     private String imageCarousel1;
     private String imageCarousel2;
     private String imageCarousel3;
+
+    // Atributos para la información de la mascota
     private String name;
     private String location;
     private String gender;
@@ -16,13 +22,16 @@ public class PetDTO {
     private Date birthDate;
     private String species;
     private String description;
+
+    // Atributos booleanos para características de la mascota
     private boolean goodWithKids;
     private boolean goodWithDogs;
     private boolean goodWithCats;
+
+    // Atributo para el ID del refugio
     private Long shelterId;
 
-
-    // Getters and Setters
+    // Getters y Setters para cada atributo
 
     public Long getId() {
         return id;
