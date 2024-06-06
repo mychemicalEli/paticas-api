@@ -5,7 +5,7 @@ public class ConfigConstants {
     private String baseUrl;
 
     public String getUploadDir() {
-        return "/Users/mychemical_eli/Pictures/paticas-images/";
+        return "/Users/mychemical_eli/Pictures/demo/";
     }
     public String getBaseUrl() {
         return "http://localhost:8081/";

@@ -1,26 +1,264 @@
 {
 	"info": {
-		"_postman_id": "357ad9d4-2cf3-479b-861b-fc4891d7e206",
+		"_postman_id": "dfc03cd7-7220-48cf-a09c-e70ff6770577",
 		"name": "Paticas",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "33648098"
+		"_exporter_id": "34292461"
 	},
 	"item": [
 		{
-			"name": "Test",
+			"name": "Auth",
 			"item": [
 				{
-					"name": "Test",
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user@user.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mypassword",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "eli",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "blanco",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user@user.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mypassword",
+									"type": "text"
+								},
+								{
+									"key": "passwordConfirm",
+									"value": "mypassword",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "CIF",
+									"value": "A12345678",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "los alcazares",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Profile data shelter",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/test",
+							"raw": "http://localhost:3001/profile/shelter",
+							"protocol": "http",
 							"host": [
-								"{{BasePathApiReal}}"
+								"localhost"
 							],
+							"port": "3001",
 							"path": [
-								"test"
+								"profile",
+								"shelter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit profile shelter",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "''",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "\"Patitas Unidas\"",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "\"eli@eli.com\"",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "\"san javier\"",
+									"type": "text"
+								},
+								{
+									"key": "CIF",
+									"value": "\"A12345679\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/profile/shelter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"profile",
+								"shelter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile data user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/profile/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"profile",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit profile user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "''",
+									"type": "text"
+								},
+								{
+									"key": "backgroundImage",
+									"value": "''",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "\"paco\"",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "\"paco@pepe.com\"",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "\"los alcazares\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/profile/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"profile",
+								"user"
 							]
 						}
 					},
@@ -57,14 +295,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/pets/21",
+							"raw": "{{BasePathApiReal}}/api/pets/3",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"pets",
-								"21"
+								"3"
 							]
 						}
 					},
@@ -76,7 +314,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/pets/shelter/1?page=0&size=5&sort=desc",
+							"raw": "{{BasePathApiReal}}/api/pets/shelter/3?page=0&size=5&sort=desc",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
@@ -84,7 +322,7 @@
 								"api",
 								"pets",
 								"shelter",
-								"1"
+								"3"
 							],
 							"query": [
 								{
@@ -115,22 +353,22 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/profileImage.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/profileImage.png"
 								},
 								{
 									"key": "imageCarousel1",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel1.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel1.png"
 								},
 								{
 									"key": "imageCarousel2",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel2.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel2.png"
 								},
 								{
 									"key": "imageCarousel3",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel3.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel3.png"
 								},
 								{
 									"key": "name",
@@ -184,7 +422,7 @@
 								},
 								{
 									"key": "shelterId",
-									"value": "1",
+									"value": "3",
 									"type": "text"
 								}
 							]
@@ -213,22 +451,22 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/profileImage.png"
 								},
 								{
 									"key": "imageCarousel1",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel1.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel2.png"
 								},
 								{
 									"key": "imageCarousel2",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel2.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel1.png"
 								},
 								{
 									"key": "imageCarousel3",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/imageCarousel3.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel3.png"
 								},
 								{
 									"key": "name",
@@ -288,14 +526,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/pets/22",
+							"raw": "{{BasePathApiReal}}/api/pets/3",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"pets",
-								"22"
+								"3"
 							]
 						}
 					},
@@ -387,14 +625,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/pets/22",
+							"raw": "{{BasePathApiReal}}/api/pets/1",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"pets",
-								"22"
+								"1"
 							]
 						}
 					},
@@ -431,48 +669,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/shelters/1",
+							"raw": "{{BasePathApiReal}}/api/shelters/2",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"shelters",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get volunteers by shelter id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{BasePathApiReal}}/api/pets/shelter/1?page=0&size=5&sort=desc",
-							"host": [
-								"{{BasePathApiReal}}"
-							],
-							"path": [
-								"api",
-								"pets",
-								"shelter",
-								"1"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "5"
-								},
-								{
-									"key": "sort",
-									"value": "desc"
-								}
+								"2"
 							]
 						}
 					},
@@ -512,7 +716,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\":3,\r\n  \"profileImage\": \"Fake image re modified\",\r\n  \"name\": \"Shelter 2 modified\",\r\n  \"location\": \"Location 2 modified\",\r\n  \"description\": \"Description 2 modified\"\r\n}",
+							"raw": "{\r\n  \"profileImage\": \"Fake image re re modified\",\r\n  \"name\": \"Shelter 2 modified\",\r\n  \"location\": \"Location 2 modified\",\r\n  \"description\": \"Description 2 modified\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -520,14 +724,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/shelters/2",
+							"raw": "{{BasePathApiReal}}/api/shelters/1",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"shelters",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -619,14 +823,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/shelters/3",
+							"raw": "{{BasePathApiReal}}/api/shelters/2",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"shelters",
-								"3"
+								"2"
 							]
 						}
 					},
@@ -663,14 +867,48 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/volunteers/1",
+							"raw": "{{BasePathApiReal}}/api/volunteers/4",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"volunteers",
-								"1"
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get volunteers by shelter id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BasePathApiReal}}/api/volunteers/shelter/3?page=0&size=5&sort=desc",
+							"host": [
+								"{{BasePathApiReal}}"
+							],
+							"path": [
+								"api",
+								"volunteers",
+								"shelter",
+								"3"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "desc"
+								}
 							]
 						}
 					},
@@ -687,7 +925,7 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel1.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/profileImage.png"
 								},
 								{
 									"key": "fullName",
@@ -711,7 +949,7 @@
 								},
 								{
 									"key": "shelterId",
-									"value": "1",
+									"value": "3",
 									"type": "text"
 								}
 							]
@@ -740,7 +978,7 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/C:/Users/Pablo/Elithel/Prototypes/Optimized images for make requests/external-resources/optimized-images-for-testing/imageCarousel3.png"
+									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel3.png"
 								},
 								{
 									"key": "fullName",
@@ -770,19 +1008,20 @@
 								{
 									"key": "id",
 									"value": "5",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/volunteers/5",
+							"raw": "{{BasePathApiReal}}/api/volunteers/4",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"volunteers",
-								"5"
+								"4"
 							]
 						}
 					},
@@ -794,14 +1033,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/volunteers/3",
+							"raw": "{{BasePathApiReal}}/api/volunteers/4",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"volunteers",
-								"3"
+								"4"
 							]
 						}
 					},
