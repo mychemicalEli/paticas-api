@@ -8,6 +8,8 @@ import com.paticasprototype.paticas.application.services.shelters.dtos.ShelterDT
 import com.paticasprototype.paticas.application.services.shelters.mapper.ShelterMapper;
 import com.paticasprototype.paticas.domain.entities.Pet;
 import com.paticasprototype.paticas.domain.entities.Shelter;
+import com.paticasprototype.paticas.domain.entities.Shelter;
+import com.paticasprototype.paticas.infrastructure.config.ConfigConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -15,10 +17,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class PetMapper {
 
-    // Método estático para mapear una entidad Pet a un DTO PetDTO.
+
+
     public static PetDTO toDTO(Pet pet) {
+
+
         PetDTO dto = new PetDTO();
-        // Se establecen los atributos del DTO con los valores de la entidad Pet.
         dto.setId(pet.getId());
         dto.setProfileImage(FileSaver.toUrl(pet.getProfileImage()));
         dto.setImageCarousel1(FileSaver.toUrl(pet.getImageCarousel1()));
@@ -38,7 +42,6 @@ public class PetMapper {
         return dto;
     }
 
-    // Método para mapear un DTO PetDTO a una entidad Pet.
     public Pet toEntity(PetDTO dto) {
         Pet patica = new Pet();
         patica.setId(dto.getId());
@@ -56,17 +59,18 @@ public class PetMapper {
         patica.setGoodWithKids(dto.isGoodWithKids());
         patica.setGoodWithDogs(dto.isGoodWithDogs());
         patica.setGoodWithCats(dto.isGoodWithCats());
-        // Se crea una instancia de Shelter y se establece su ID en la mascota.
+
         Shelter shelter = new Shelter();
         shelter.setId(dto.getShelterId());
         patica.setShelter(shelter);
         return patica;
     }
 
-    // Método estático para mapear una entidad Pet a un DTO detallado GetPetByIdResponse.
+
+
+
     public static GetPetByIdResponse toDetailDTO(Pet pet) {
         GetPetByIdResponse dto = new GetPetByIdResponse();
-        // Se establecen los atributos del DTO con los valores de la entidad Pet.
         dto.setId(pet.getId());
         dto.setProfileImage(FileSaver.toUrl(pet.getProfileImage()));
         dto.setImageCarousel1(FileSaver.toUrl(pet.getImageCarousel1()));
@@ -82,7 +86,6 @@ public class PetMapper {
         dto.setGoodWithKids(pet.isGoodWithKids());
         dto.setGoodWithDogs(pet.isGoodWithDogs());
         dto.setGoodWithCats(pet.isGoodWithCats());
-        // Se mapea el objeto Shelter de la entidad Pet a un DTO ShelterDTO.
         dto.setShelter(ShelterMapper.toDTO(pet.getShelter()));
         return dto;
     }
