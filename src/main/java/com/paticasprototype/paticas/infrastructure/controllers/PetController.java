@@ -54,6 +54,7 @@ public class PetController {
         return updatedPet.map(p -> ResponseEntity.ok(PetMapper.toDTO(p))).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePet(@PathVariable Long id) {
         boolean isDeleted = petService.deletePet(id);

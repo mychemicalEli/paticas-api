@@ -1,0 +1,564 @@
+{
+  "uuid": "009a7b47-9335-4238-ba4a-17db5cba0a56",
+  "lastMigration": 32,
+  "name": "Paticas (copy)",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "5330da43-ce42-46d9-bd43-e4916956cb4a",
+      "name": "Auth",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "5975325c-1872-4095-a184-430502e794cf"
+        },
+        {
+          "type": "route",
+          "uuid": "3624d267-f4fd-4a4c-852f-c5b41337b7e7"
+        }
+      ]
+    },
+    {
+      "uuid": "f7af234d-6b80-4f90-b960-029dafbc2041",
+      "name": "Shelters",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "becc77f6-e84c-42ef-9af4-ef6b14d65c1d"
+        },
+        {
+          "type": "route",
+          "uuid": "ea302a0a-c0fb-4c11-a5da-b534269b30c2"
+        },
+        {
+          "type": "route",
+          "uuid": "f281ff11-b173-4baa-811c-e40988e75064"
+        }
+      ]
+    },
+    {
+      "uuid": "633ca90a-5de1-4ebb-bc5a-c1158c6225e8",
+      "name": "Paticas",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "84a2505f-4bdb-47ce-865e-922e04ed63bd"
+        },
+        {
+          "type": "route",
+          "uuid": "53a822a8-e0d9-4152-81f3-98948d0d1b11"
+        },
+        {
+          "type": "route",
+          "uuid": "782c9809-3e77-44b9-a81c-369758222fe2"
+        }
+      ]
+    },
+    {
+      "uuid": "eaad119d-009a-44e3-a575-5457f6267887",
+      "name": "Profile",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "4ee49572-c878-47a0-98b4-a9131d3d2b0e"
+        },
+        {
+          "type": "route",
+          "uuid": "19208ab3-417a-40f1-b82c-ddf1531ec63c"
+        },
+        {
+          "type": "route",
+          "uuid": "dd3f6c15-5cce-4a35-99fc-3d4ec77448f8"
+        },
+        {
+          "type": "route",
+          "uuid": "f0deca85-478f-4273-a694-6843b622ab44"
+        }
+      ]
+    },
+    {
+      "uuid": "8e305c35-9d65-45ad-8ed8-4bb86b836ca4",
+      "name": "Formularios",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "0715e6c1-b138-4d7c-928e-bdf8a42d300c"
+        },
+        {
+          "type": "route",
+          "uuid": "1afd5c0b-0f9b-400b-bb78-baa11c9653a5"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "5975325c-1872-4095-a184-430502e794cf",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "auth/login",
+      "responses": [
+        {
+          "uuid": "adfd46b7-cdda-4d4a-a628-6e9e12598b8b",
+          "body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsInBhc3N3b3JkIjoiMTIzNCIsImV4cGlyYXRpb24tZGF0ZSI6IjIwMjQtMDUtMTVUMTA6MDA6MDAifQ.s5RGXyFx8YwW0OiV1U1UPtIdApPTuZQogn16tmc0BZY\"\n}\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3624d267-f4fd-4a4c-852f-c5b41337b7e7",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "auth/signup",
+      "responses": [
+        {
+          "uuid": "f3fd01f0-66b4-4de8-8922-737bd2ac81ec",
+          "body": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsInBhc3N3b3JkIjoiMTIzNCIsImV4cGlyYXRpb24tZGF0ZSI6IjIwMjQtMDUtMTVUMTA6MDA6MDAifQ.s5RGXyFx8YwW0OiV1U1UPtIdApPTuZQogn16tmc0BZY\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "becc77f6-e84c-42ef-9af4-ef6b14d65c1d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "shelters",
+      "responses": [
+        {
+          "uuid": "eb695464-55c1-47ba-b428-ce838cf1c1ab",
+          "body": "{\n  \"shelters\":\n  [\n    {{#repeat 56}}\n     {\n      \"id\":{{faker 'number.int' min=1 max=10}},\n      \"profileImage\":\"https://loremflickr.com/400/400/animal-shelter?random={{faker 'datatype.uuid'}}\",\n      \"name\": \"{{faker 'company.name'}}\",\n      \"location\": \"{{ faker 'location.cityName' }}\",\n      \"description\" : \"{{faker 'lorem.paragraph' 10}}\",\n      \"liked\": {{faker 'datatype.boolean'}}\n      \n     }\n   {{/repeat}}\n  ],\n  \n  \"totalElements\":1234,\n  \"page\":0,\n  \"pageSize\":12\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "ea302a0a-c0fb-4c11-a5da-b534269b30c2",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "shelters/:id",
+      "responses": [
+        {
+          "uuid": "0cbb377c-fb64-4874-88fd-39e6ebf7a038",
+          "body": "{\n  \"id\":{{faker 'number.int' min=1 max=10}},\n  \"profileImage\":\"https://loremflickr.com/400/400/animal-shelter?random={{faker 'datatype.uuid'}}\",\n  \"name\": \"{{faker 'company.name'}}\",\n  \"location\":\"{{ faker 'location.cityName' }}\",\n  \"description\" : \"{{faker 'lorem.paragraph' 10}}\",\n  \"liked\": {{faker 'datatype.boolean'}},\n\n  \"paticas\":\n   [\n    {{#repeat 53}}\n     {\n      \"id\":{{faker 'number.int' min=1 max=99}},\n      \"profileImage\":\"https://loremflickr.com/400/400/pet?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel1\":\"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel2\":\"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel3\":\"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"name\": \"{{faker 'person.firstName'}}\",\n      \"shelter\": \"{{faker 'company.name'}}\",\n      \"location\":\"{{ faker 'location.cityName' }}\",\n      \"gender\": \"{{ faker 'person.sexType' }}\",\n      \"size\": {{faker 'number.int' min=1 max=3}},\n      \"birthDate\": \"{{faker 'date.past' '%d/%m/%Y'}}\",\n      \"species\" : \"{{faker 'animal.type'}}\",\n      \"description\" : \"{{faker 'lorem.paragraph'8}}\",\n      \"goodWithKids\": {{faker 'datatype.boolean'}},\n      \"goodWithDogs\":{{faker 'datatype.boolean'}},\n      \"goodWithCats\":{{faker 'datatype.boolean'}},\n      \"liked\": {{faker 'datatype.boolean'}},\n      \"shelterId\":  {{faker 'number.int' min=1 max=10}}\n     }\n   {{/repeat}}\n   ],\n  \n  \"totalElements\":1234,\n  \"page\":0,\n  \"pageSize\":12,\n  \"shelterId\": {{faker 'number.int' min=1 max=10}}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "84a2505f-4bdb-47ce-865e-922e04ed63bd",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "paticas",
+      "responses": [
+        {
+          "uuid": "abf6f4f0-14d3-4d67-9349-2f3ab4aae9cb",
+          "body": "{\n    \"paticas\":\n  [\n    {{#repeat 52}}\n     {\n      \"id\":{{faker 'number.int' min=1 max=99}},\n      \"profileImage\": \"https://loremflickr.com/400/400/pet?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel1\":\"https://loremflickr.com/800/400/pet?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel2\":\"https://loremflickr.com/800/400/pet?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel3\":\"https://loremflickr.com/800/400/pet?random={{faker 'datatype.uuid'}}\",\n      \"name\": \"{{faker 'person.firstName'}}\",\n      \"shelter\": \"{{faker 'company.name'}}\",\n      \"location\":\"{{ faker 'location.cityName' }}\",\n      \"gender\": \"{{ faker 'person.sexType' }}\",\n      \"size\": {{faker 'number.int' min=1 max=3}},\n      \"birthDate\": \"{{faker 'date.past' '%d/%m/%Y'}}\",\n      \"species\" : \"{{faker 'animal.type'}}\",\n      \"description\" : \"{{faker 'lorem.paragraph'8}}\",\n      \"goodWithKids\": {{faker 'datatype.boolean'}},\n      \"goodWithDogs\":{{faker 'datatype.boolean'}},\n      \"goodWithCats\":{{faker 'datatype.boolean'}},\n      \"liked\": {{faker 'datatype.boolean'}},\n      \"shelterId\":  {{faker 'number.int' min=1 max=10}}\n     }\n   {{/repeat}}\n  ],\n  \n  \"totalElements\":1234,\n  \"page\":0,\n  \"pageSize\":12\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "53a822a8-e0d9-4152-81f3-98948d0d1b11",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "paticas/:id",
+      "responses": [
+        {
+          "uuid": "56d622a2-fa42-4b22-834e-5a8d39288c1a",
+          "body": "{    \n      \"id\":{{faker 'number.int' min=1 max=99}},\n      \"profileImage\":\"https://loremflickr.com/400/400/pet?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel1\":\"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel2\":\"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel3\":\"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"name\": \"{{faker 'person.firstName'}}\",\n      \"shelter\": \"{{faker 'company.name'}}\",\n      \"location\":\"{{ faker 'location.cityName' }}\",\n      \"gender\": \"{{ faker 'person.sexType' }}\",\n      \"size\": {{faker 'number.int' min=1 max=3}},\n      \"birthDate\": \"{{faker 'date.past' '%d/%m/%Y'}}\",\n      \"species\" : \"{{faker 'animal.type'}}\",\n      \"description\" : \"{{faker 'lorem.paragraph'8}}\",\n      \"goodWithKids\": {{faker 'datatype.boolean'}},\n      \"goodWithDogs\":{{faker 'datatype.boolean'}},\n      \"goodWithCats\":{{faker 'datatype.boolean'}},\n      \"liked\": {{faker 'datatype.boolean'}},\n      \"shelterId\":  {{faker 'number.int' min=1 max=10}}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "4ee49572-c878-47a0-98b4-a9131d3d2b0e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "profile/shelter",
+      "responses": [
+        {
+          "uuid": "949aa62e-7980-4910-b9c7-0213c5389683",
+          "body": "{ \"id\":{{faker 'number.int' min=1 max=10}},\n  \"profileImage\":\"{{faker 'image.urlPicsumPhotos'}}\",\n  \"backgroundImage\": \"{{faker 'image.urlPicsumPhotos'}}\",\n  \"name\": \"{{faker 'company.name'}}\",\n  \"phone\" : \"666888333\",\n  \"email\": \"{{faker 'internet.email'}}\",\n  \"location\":\"{{ faker 'location.cityName' }}\",\n  \"description\" : \"{{faker 'lorem.paragraph' 10}}\",\n  \"CIF\": \"A12345678\"\n\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "19208ab3-417a-40f1-b82c-ddf1531ec63c",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "profile/shelter",
+      "responses": [
+        {
+          "uuid": "96c3a100-2802-4dd6-97f4-8d80bc6718ca",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "dd3f6c15-5cce-4a35-99fc-3d4ec77448f8",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "profile/user",
+      "responses": [
+        {
+          "uuid": "7fccd472-5274-453b-8f03-66bcb6b289f7",
+          "body": "{\n  \"id\": {{faker 'number.int' min=1 max=10}},\n  \"profileImage\": \"{{faker 'image.urlPicsumPhotos'}}\",\n  \"backgroundImage\": \"{{faker 'image.urlPicsumPhotos'}}\",\n  \"name\": \"{{faker 'person.fullName'}}\",\n  \"phone\" : \"666888333\",\n  \"email\": \"{{faker 'internet.email'}}\",\n  \"location\": \"{{ faker 'location.cityName' }}\",\n  \"paticas\": [\n    {{#repeat 24}} \n    {\n      \"id\": {{faker 'number.int' min=1 max=99}},\n      \"profileImage\": \"https://loremflickr.com/400/400/pet?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel1\": \"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel2\": \"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"imageCarousel3\": \"https://loremflickr.com/800/400/cat?random={{faker 'datatype.uuid'}}\",\n      \"name\": \"{{faker 'person.firstName'}}\",\n      \"shelter\": \"{{faker 'company.name'}}\",\n      \"location\": \"{{ faker 'location.cityName' }}\",\n      \"gender\": \"{{ faker 'person.sexType' }}\",\n      \"size\": {{faker 'number.int' min=1 max=3}},\n      \"birthDate\": \"{{faker 'date.past' '%d/%m/%Y'}}\",\n      \"species\": \"{{faker 'animal.type'}}\",\n      \"description\": \"{{faker 'lorem.paragraph'8}}\",\n      \"goodWithKids\": {{faker 'datatype.boolean'}},\n      \"goodWithDogs\": {{faker 'datatype.boolean'}},\n      \"goodWithCats\": {{faker 'datatype.boolean'}},\n      \"liked\": true,\n      \"shelterId\": {{faker 'number.int' min=1 max=10}}\n    }\n    {{/repeat}}\n  ],\n  \n  \"shelters\":\n  [\n    {{#repeat 22}}\n     {\n      \"id\":{{faker 'number.int' min=1 max=10}},\n      \"profileImage\":\"https://loremflickr.com/400/400/animal-shelter?random={{faker 'datatype.uuid'}}\",\n      \"name\": \"{{faker 'company.name'}}\",\n      \"location\": \"{{ faker 'location.cityName' }}\",\n      \"liked\": true\n     }\n   {{/repeat}}\n  ],\n  \"totalElements\": 1234,\n  \"page\": 0,\n  \"pageSize\": 12,\n  \"isLiked\": {{faker 'datatype.boolean'}}\n}\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "f0deca85-478f-4273-a694-6843b622ab44",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "profile/user",
+      "responses": [
+        {
+          "uuid": "8bf21a59-2d98-43bb-a76b-88ade44abe96",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "782c9809-3e77-44b9-a81c-369758222fe2",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "paticas/:id/like",
+      "responses": [
+        {
+          "uuid": "3f52473d-2e4b-40c8-896a-0eb57038ed3c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "f281ff11-b173-4baa-811c-e40988e75064",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "shelters/:id/like",
+      "responses": [
+        {
+          "uuid": "77a61b4b-6f15-43a2-8cec-4eb30dd44dd2",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "0715e6c1-b138-4d7c-928e-bdf8a42d300c",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "formularios/adoption",
+      "responses": [
+        {
+          "uuid": "fa7cb906-e89a-47f0-be1e-3da5eed0f2ab",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "1afd5c0b-0f9b-400b-bb78-baa11c9653a5",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "formularios/volunteer",
+      "responses": [
+        {
+          "uuid": "d1f299ce-9b58-4d30-bff7-4557b42e7b04",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "5330da43-ce42-46d9-bd43-e4916956cb4a"
+    },
+    {
+      "type": "folder",
+      "uuid": "f7af234d-6b80-4f90-b960-029dafbc2041"
+    },
+    {
+      "type": "folder",
+      "uuid": "633ca90a-5de1-4ebb-bc5a-c1158c6225e8"
+    },
+    {
+      "type": "folder",
+      "uuid": "eaad119d-009a-44e3-a575-5457f6267887"
+    },
+    {
+      "type": "folder",
+      "uuid": "8e305c35-9d65-45ad-8ed8-4bb86b836ca4"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

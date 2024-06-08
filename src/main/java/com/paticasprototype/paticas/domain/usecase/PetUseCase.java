@@ -48,6 +48,7 @@ public class PetUseCase {
         });
     }
 
+
     public boolean deletePet(Long id) {
         return petRepository.findById(id).map(pet -> {
             petRepository.deleteById(id);
