@@ -1,5 +1,4 @@
 package com.paticasprototype.paticas.domain.entities;
-
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
@@ -22,10 +21,7 @@ public class Shelter {
     @OneToMany(mappedBy = "shelter", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<Volunteer> volunteers;
-
     // Getters and Setters
-
-    // Métodos para el ID
     public Long getId() {
         return id;
     }
@@ -34,7 +30,6 @@ public class Shelter {
         this.id = id;
     }
 
-    // Métodos para la imagen de perfil
     public String getProfileImage() {
         return profileImage;
     }
@@ -43,7 +38,6 @@ public class Shelter {
         this.profileImage = profileImage;
     }
 
-    // Métodos para el nombre
     public String getName() {
         return name;
     }
@@ -52,7 +46,6 @@ public class Shelter {
         this.name = name;
     }
 
-    // Métodos para la ubicación
     public String getLocation() {
         return location;
     }
@@ -61,7 +54,6 @@ public class Shelter {
         this.location = location;
     }
 
-    // Métodos para la descripción
     public String getDescription() {
         return description;
     }
@@ -70,21 +62,11 @@ public class Shelter {
         this.description = description;
     }
 
-    // Métodos para obtener y establecer las mascotas asociadas
-    public List<Pet> getPets() {
+    public List<Pet> getPaticas() {
         return pets;
     }
 
-    public void setPets(List<Pet> pets) {
+    public void setPaticas(List<Pet> pets) {
         this.pets = pets;
-    }
-
-    // Métodos para obtener y establecer los voluntarios asociados
-    public List<Volunteer> getVolunteers() {
-        return volunteers;
-    }
-
-    public void setVolunteers(List<Volunteer> volunteers) {
-        this.volunteers = volunteers;
     }
 }

@@ -5,16 +5,11 @@ import com.paticasprototype.paticas.application.services.shelters.dtos.ShelterDT
 import java.util.Date;
 
 public class GetPetByIdResponse {
-    // Atributo para el ID de la mascota
     private Long id;
-
-    // Atributos para las imágenes de la mascota
     private String profileImage;
     private String imageCarousel1;
     private String imageCarousel2;
     private String imageCarousel3;
-
-    // Atributos para la información de la mascota
     private String name;
     private String location;
     private String gender;
@@ -22,16 +17,11 @@ public class GetPetByIdResponse {
     private Date birthDate;
     private String species;
     private String description;
-
-    // Atributos booleanos para características de la mascota
     private boolean goodWithKids;
     private boolean goodWithDogs;
     private boolean goodWithCats;
-
-    // Atributo para el DTO del refugio
+    private boolean liked;
     private ShelterDTO shelter;
-
-    // Getters y Setters para cada atributo
 
     public Long getId() {
         return id;
@@ -151,6 +141,14 @@ public class GetPetByIdResponse {
 
     public void setGoodWithCats(boolean goodWithCats) {
         this.goodWithCats = goodWithCats;
+    }
+
+    public boolean isLiked() {
+        return liked;
+    }
+
+    public void setLiked(boolean liked) {
+        this.liked = liked;
     }
 
     public ShelterDTO getShelter() {

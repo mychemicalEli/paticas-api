@@ -24,14 +24,13 @@ public class Pet {
     private boolean goodWithKids;
     private boolean goodWithDogs;
     private boolean goodWithCats;
+    private boolean liked;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "shelter_id")
     private Shelter shelter;
 
     // Getters and Setters
-
-    // Métodos para el ID
     public Long getId() {
         return id;
     }
@@ -40,7 +39,6 @@ public class Pet {
         this.id = id;
     }
 
-    // Métodos para la imagen de perfil
     public String getProfileImage() {
         return profileImage;
     }
@@ -49,7 +47,6 @@ public class Pet {
         this.profileImage = profileImage;
     }
 
-    // Métodos para el carrusel de imágenes
     public String getImageCarousel1() {
         return imageCarousel1;
     }
@@ -74,7 +71,6 @@ public class Pet {
         this.imageCarousel3 = imageCarousel3;
     }
 
-    // Métodos para el nombre
     public String getName() {
         return name;
     }
@@ -83,7 +79,6 @@ public class Pet {
         this.name = name;
     }
 
-    // Métodos para la ubicación
     public String getLocation() {
         return location;
     }
@@ -92,7 +87,6 @@ public class Pet {
         this.location = location;
     }
 
-    // Métodos para el género
     public String getGender() {
         return gender;
     }
@@ -101,7 +95,6 @@ public class Pet {
         this.gender = gender;
     }
 
-    // Métodos para el tamaño
     public int getSize() {
         return size;
     }
@@ -110,7 +103,6 @@ public class Pet {
         this.size = size;
     }
 
-    // Métodos para la fecha de nacimiento
     public Date getBirthDate() {
         return birthDate;
     }
@@ -119,7 +111,6 @@ public class Pet {
         this.birthDate = birthDate;
     }
 
-    // Métodos para la especie
     public String getSpecies() {
         return species;
     }
@@ -128,7 +119,6 @@ public class Pet {
         this.species = species;
     }
 
-    // Métodos para la descripción
     public String getDescription() {
         return description;
     }
@@ -137,7 +127,6 @@ public class Pet {
         this.description = description;
     }
 
-    // Métodos para saber si es bueno con niños
     public boolean isGoodWithKids() {
         return goodWithKids;
     }
@@ -146,7 +135,6 @@ public class Pet {
         this.goodWithKids = goodWithKids;
     }
 
-    // Métodos para saber si es bueno con perros
     public boolean isGoodWithDogs() {
         return goodWithDogs;
     }
@@ -155,7 +143,6 @@ public class Pet {
         this.goodWithDogs = goodWithDogs;
     }
 
-    // Métodos para saber si es bueno con gatos
     public boolean isGoodWithCats() {
         return goodWithCats;
     }
@@ -164,7 +151,14 @@ public class Pet {
         this.goodWithCats = goodWithCats;
     }
 
-    // Métodos para obtener y establecer el refugio asociado
+    public boolean isLiked() {
+        return liked;
+    }
+
+    public void setLiked(boolean liked) {
+        this.liked = liked;
+    }
+
     public Shelter getShelter() {
         return shelter;
     }
@@ -172,4 +166,5 @@ public class Pet {
     public void setShelter(Shelter shelter) {
         this.shelter = shelter;
     }
+
 }

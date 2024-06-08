@@ -34,6 +34,7 @@ public class CreatePetMapper {
         patica.setGoodWithKids(dto.isGoodWithKids());
         patica.setGoodWithDogs(dto.isGoodWithDogs());
         patica.setGoodWithCats(dto.isGoodWithCats());
+        patica.setLiked(dto.isLiked());
 
         Shelter shelter = new Shelter();
         shelter.setId(dto.getShelterId());
@@ -65,6 +66,7 @@ public class CreatePetMapper {
         pet.setGoodWithKids(dto.isGoodWithKids());
         pet.setGoodWithDogs(dto.isGoodWithDogs());
         pet.setGoodWithCats(dto.isGoodWithCats());
+        pet.setLiked(dto.isLiked());
 
         Shelter shelter = new Shelter();
         shelter.setId(dto.getShelterId());

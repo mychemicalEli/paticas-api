@@ -22,6 +22,7 @@ public class UpdatePetRequest {
     private boolean goodWithKids;
     private boolean goodWithDogs;
     private boolean goodWithCats;
+    private boolean liked;
     private Long shelterId;
 
     // Getters and Setters
@@ -146,6 +147,13 @@ public class UpdatePetRequest {
         this.goodWithCats = goodWithCats;
     }
 
+    public boolean isLiked() {
+        return liked;
+    }
+
+    public void setLiked(boolean liked) {
+        this.liked = liked;
+    }
     public Long getShelterId() {
         return shelterId;
     }
