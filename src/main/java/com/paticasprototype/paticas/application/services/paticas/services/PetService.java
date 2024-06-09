@@ -29,9 +29,10 @@ public class PetService {
         return petUseCase.getPetById(id);
     }
 
-    public Pet createPet(CreatePetRequest pet) throws IOException {
-        return petUseCase.createPet(pet);
+    public PetDTO createPet(CreatePetRequest request) throws IOException {
+        return petUseCase.createPet(request);
     }
+
 
     public Optional<Pet> updatePet(Long id, UpdatePetRequest petDetails) throws IOException {
         return petUseCase.updatePet(id, petDetails);

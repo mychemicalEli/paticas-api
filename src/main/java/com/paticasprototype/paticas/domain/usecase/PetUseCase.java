@@ -7,9 +7,16 @@ import com.paticasprototype.paticas.application.services.paticas.mapper.CreatePe
 import com.paticasprototype.paticas.application.services.paticas.mapper.PetMapper;
 import com.paticasprototype.paticas.application.services.shelters.dtos.ShelterDTO;
 import com.paticasprototype.paticas.application.services.shelters.mapper.ShelterMapper;
+import com.paticasprototype.paticas.application.services.volunteers.dtos.CreateVolunteerRequest;
+import com.paticasprototype.paticas.application.services.volunteers.dtos.VolunteerDTO;
+import com.paticasprototype.paticas.application.services.volunteers.mapper.CreateVolunteerMapper;
+import com.paticasprototype.paticas.application.services.volunteers.mapper.VolunteerMapper;
 import com.paticasprototype.paticas.domain.entities.Pet;
 import com.paticasprototype.paticas.domain.entities.Shelter;
+import com.paticasprototype.paticas.domain.entities.Volunteer;
 import com.paticasprototype.paticas.domain.repositories.PetRepository;
+import com.paticasprototype.paticas.domain.repositories.ShelterRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -18,7 +25,10 @@ import java.util.List;
 import java.util.Optional;
 
 public class PetUseCase {
-    private final PetRepository petRepository;
+    @Autowired
+    private PetRepository petRepository;
+    @Autowired
+    private ShelterRepository shelterRepository;
 
     public PetUseCase(PetRepository petRepository) {
         this.petRepository = petRepository;
@@ -32,9 +42,13 @@ public class PetUseCase {
         return petRepository.findById(id);
     }
 
-    public Pet createPet(CreatePetRequest petDto)throws IOException {
-        Pet pet = new CreatePetMapper().toEntity(petDto);
-        return petRepository.save(pet);
+    public PetDTO createPet(CreatePetRequest request)throws IOException {
+        CreatePetMapper petMapper = new CreatePetMapper();
+        Pet pet = petMapper.toEntity(request);
+        Shelter shelter = shelterRepository.findById(request.getShelterId())
+                .orElseThrow(() -> new RuntimeException("Shelter not found"));
+        pet.setShelter(shelter);
+        return PetMapper.toDTO(petRepository.save(pet));
     }
 
     public Optional<Pet> updatePet(Long id, UpdatePetRequest petDetails) throws IOException {

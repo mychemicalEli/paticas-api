@@ -11,7 +11,7 @@ public class GetPetByIdResponse {
     private String imageCarousel2;
     private String imageCarousel3;
     private String name;
-    private String location;
+
     private String gender;
     private int size;
     private Date birthDate;
@@ -71,13 +71,6 @@ public class GetPetByIdResponse {
         this.name = name;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
     public String getGender() {
         return gender;

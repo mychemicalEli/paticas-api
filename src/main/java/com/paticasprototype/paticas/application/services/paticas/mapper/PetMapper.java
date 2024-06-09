@@ -29,7 +29,6 @@ public class PetMapper {
         dto.setImageCarousel2(FileSaver.toUrl(pet.getImageCarousel2()));
         dto.setImageCarousel3(FileSaver.toUrl(pet.getImageCarousel3()));
         dto.setName(pet.getName());
-        dto.setLocation(pet.getLocation());
         dto.setGender(pet.getGender());
         dto.setSize(pet.getSize());
         dto.setBirthDate(pet.getBirthDate());
@@ -51,7 +50,6 @@ public class PetMapper {
         patica.setImageCarousel2(dto.getImageCarousel2());
         patica.setImageCarousel3(dto.getImageCarousel3());
         patica.setName(dto.getName());
-        patica.setLocation(dto.getLocation());
         patica.setGender(dto.getGender());
         patica.setSize(dto.getSize());
         patica.setBirthDate(dto.getBirthDate());
@@ -79,7 +77,6 @@ public class PetMapper {
         dto.setImageCarousel2(FileSaver.toUrl(pet.getImageCarousel2()));
         dto.setImageCarousel3(FileSaver.toUrl(pet.getImageCarousel3()));
         dto.setName(pet.getName());
-        dto.setLocation(pet.getLocation());
         dto.setGender(pet.getGender());
         dto.setSize(pet.getSize());
         dto.setBirthDate(pet.getBirthDate());
