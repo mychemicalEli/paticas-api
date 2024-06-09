@@ -30,9 +30,11 @@ public class VolunteerService {
     }
 
     // Método para crear un nuevo voluntario
-    public VolunteerDTO createVolunteer(CreateVolunteerRequest volunteerDTO) throws IOException {
-        return volunteerUseCase.createVolunteer(volunteerDTO);
+    // Método para crear un nuevo voluntario
+    public VolunteerDTO createVolunteer(CreateVolunteerRequest request) throws IOException {
+        return volunteerUseCase.createVolunteer(request);
     }
+
 
     // Método para actualizar un voluntario existente
     public Optional<VolunteerDTO> updateVolunteer(Long id, UpdateVolunteerRequest volunteerDTO) {

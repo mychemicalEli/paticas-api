@@ -45,11 +45,10 @@ public class VolunteerUseCase {
     }
 
     // Método para crear un nuevo voluntario a partir de un DTO y mapearlo a un DTO
-    public VolunteerDTO createVolunteer(CreateVolunteerRequest volunteerDTO) throws IOException {
+    public VolunteerDTO createVolunteer(CreateVolunteerRequest request) throws IOException {
         CreateVolunteerMapper volunteerMapper = new CreateVolunteerMapper();
-        Volunteer volunteer = volunteerMapper.toEntity(volunteerDTO);
-        // Se busca el refugio al que el voluntario está asociado y se establece en el voluntario
-        Shelter shelter = shelterRepository.findById(volunteerDTO.getShelterId())
+        Volunteer volunteer = volunteerMapper.toEntity(request);
+        Shelter shelter = shelterRepository.findById(request.getShelterId())
                 .orElseThrow(() -> new RuntimeException("Shelter not found"));
         volunteer.setShelter(shelter);
         return VolunteerMapper.toDTO(volunteerRepository.save(volunteer));

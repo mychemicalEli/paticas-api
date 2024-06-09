@@ -18,32 +18,18 @@ public class CreateVolunteerMapper {
 
     // Método para mapear un objeto CreateVolunteerRequest a una entidad Volunteer
     public Volunteer toEntity(CreateVolunteerRequest dto) throws IOException {
-        // Crear una nueva instancia de Volunteer
         Volunteer volunteer = new Volunteer();
-
-        // Establecer la imagen de perfil del voluntario, guardando el archivo y obteniendo la URL
         volunteer.setProfileImage(fileSaver.saveFile(dto.getProfileImage()));
-
-        // Establecer la disponibilidad del voluntario
         volunteer.setAvailability(dto.getAvailability());
-
-        // Establecer el correo electrónico del voluntario
         volunteer.setEmail(dto.getEmail());
-
-        // Establecer el nombre completo del voluntario
         volunteer.setFullName(dto.getFullName());
-
-        // Establecer el número de teléfono del voluntario
         volunteer.setPhone(dto.getPhone());
 
-        // Crear una nueva instancia de Shelter y establecer su ID
         Shelter shelter = new Shelter();
         shelter.setId(dto.getShelterId());
-
-        // Establecer el refugio asociado al voluntario
         volunteer.setShelter(shelter);
 
-        return volunteer; // Devolver el voluntario mapeado
+        return volunteer;
     }
 
     // Método para mapear un objeto UpdateVolunteerRequest a una entidad Volunteer
