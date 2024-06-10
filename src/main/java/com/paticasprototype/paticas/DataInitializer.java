@@ -18,6 +18,7 @@ import java.util.Date;
 
 @Component
 public class DataInitializer implements CommandLineRunner {
+    String basePath = "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/";
 
     @Autowired
     private VolunteerService volunteerService;
@@ -29,6 +30,9 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        String basePath = "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/";
+
 
         insertShelter();
         // Insertar datos de voluntarios
@@ -59,8 +63,6 @@ public class DataInitializer implements CommandLineRunner {
     }
 
     private void insertVolunteers() throws IOException {
-        // Ruta base de las imágenes
-        String basePath = "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/";
 
         // Datos de los voluntarios
         String[] fullNames = {"Juan Pérez", "María López", "Pedro García", "Ana Martínez", "David Rodríguez", "Laura Ruiz", "Carlos Sánchez", "Sofía García", "Pablo Díaz"};
@@ -96,7 +98,6 @@ public class DataInitializer implements CommandLineRunner {
 
 
     private void insertPets() throws IOException {
-        String basePath = "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/";
 
         // Datos de las mascotas
         String[] petProfileImages = {"profile_1.jpg", "profile_2.jpg", "profile_3.jpg", "profile_4.jpg", "profile_5.jpg", "profile_6.jpg", "profile_7.jpg", "profile_8.jpg", "profile_9.jpg", "profile_10.jpg", "profile_11.jpg", "profile_12.jpg", "profile_13.jpg", "profile_14.jpg", "profile_15.jpg", "profile_16.jpg", "profile_17.jpg", "profile_18.jpg", "profile_19.jpg", "profile_20.jpg"};
