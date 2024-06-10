@@ -109,5 +109,10 @@ public class VolunteerController {
     }
 
     // Endpoint para obtener voluntarios por el ID de un refugio con paginación
-
+    @GetMapping("/shelter/{shelterId}")
+    public ResponseEntity<Page<VolunteerDTO>> getVolunteersByShelterId(
+            @PathVariable Long shelterId,
+            Pageable pageable) {
+        return ResponseEntity.ok(volunteerService.getVolunteersByShelterId(shelterId, pageable));
+    }
 }

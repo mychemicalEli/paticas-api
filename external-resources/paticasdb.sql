@@ -1,8 +1,8 @@
 -- Define la variable para la ruta base
-SET @base_path = '/API/paticas-api/external-resources/optimized-images-for-testing/';
+SET @base_path = '/paticas-api/external-resources/optimized-images-for-testing/';
 
 INSERT INTO shelter (id, profile_image, name, location, description) VALUES 
-(16, CONCAT(@base_path,'shelter_profile_image.jpg'), 'Paticas Unidas', 'Murcia', 'Nuestro refugio ofrece un hogar seguro y amoroso para animales necesitados. Garantizamos que cada mascota reciba la atención y el cuidado que merece. Ven a visitarnos y encuentra a tu nuevo amigo peludo.');
+(10, CONCAT(@base_path,'shelter_profile_image.jpg'), 'Paticas Unidas', 'Murcia', 'Nuestro refugio ofrece un hogar seguro y amoroso para animales necesitados. Garantizamos que cada mascota reciba la atención y el cuidado que merece. Ven a visitarnos y encuentra a tu nuevo amigo peludo.');
 
 
 
