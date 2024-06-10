@@ -51,6 +51,7 @@ public class PetUseCase {
         return PetMapper.toDTO(petRepository.save(pet));
     }
 
+
     public Optional<Pet> updatePet(Long id, UpdatePetRequest petDetails) throws IOException {
         return petRepository.findById(id).map(existingPet -> {
             try {
