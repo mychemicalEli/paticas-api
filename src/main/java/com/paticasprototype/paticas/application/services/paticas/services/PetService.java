@@ -3,6 +3,8 @@ package com.paticasprototype.paticas.application.services.paticas.services;
 import com.paticasprototype.paticas.application.services.paticas.dtos.CreatePetRequest;
 import com.paticasprototype.paticas.application.services.paticas.dtos.PetDTO;
 import com.paticasprototype.paticas.application.services.paticas.dtos.UpdatePetRequest;
+import com.paticasprototype.paticas.application.services.volunteers.dtos.CreateVolunteerRequest;
+import com.paticasprototype.paticas.application.services.volunteers.dtos.VolunteerDTO;
 import com.paticasprototype.paticas.domain.entities.Pet;
 import com.paticasprototype.paticas.domain.usecase.PetUseCase;
 import org.springframework.data.domain.Page;

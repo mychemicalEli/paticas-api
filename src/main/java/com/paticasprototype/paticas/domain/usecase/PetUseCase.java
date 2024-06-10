@@ -26,7 +26,7 @@ import java.util.Optional;
 
 public class PetUseCase {
     @Autowired
-    private PetRepository petRepository;
+    private final PetRepository petRepository;
     @Autowired
     private ShelterRepository shelterRepository;
 

@@ -90,6 +90,7 @@ public class PetController {
     }
 
 
+
     @PutMapping(value = "/{id}", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<PetDTO> updatePet(@PathVariable Long id, @ModelAttribute UpdatePetRequest petDetails) throws IOException {
         Optional<Pet> updatedPet = petService.updatePet(id, petDetails);

@@ -14,7 +14,7 @@ public class UpdatePetRequest {
     private String name;
     private String gender;
     private int size;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date birthDate;
     private String species;
     private String description;

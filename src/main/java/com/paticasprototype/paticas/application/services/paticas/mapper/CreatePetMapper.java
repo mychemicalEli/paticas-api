@@ -19,31 +19,28 @@ public class CreatePetMapper {
     FileSaver fileSaver = new FileSaver();
 
     public Pet toEntity(CreatePetRequest dto) throws IOException {
-        Pet pet = new Pet();
-        pet.setProfileImage(fileSaver.saveFile(dto.getProfileImage()));
-        pet.setImageCarousel1(fileSaver.saveFile(dto.getImageCarousel1()));
-        pet.setImageCarousel2(fileSaver.saveFile(dto.getImageCarousel2()));
-        pet.setImageCarousel3(fileSaver.saveFile(dto.getImageCarousel3()));
-        pet.setName(dto.getName());
-        pet.setGender(dto.getGender());
-        pet.setSize(dto.getSize());
-        pet.setBirthDate(dto.getBirthDate());
-        pet.setSpecies(dto.getSpecies());
-        pet.setDescription(dto.getDescription());
-        pet.setGoodWithKids(dto.isGoodWithKids());
-        pet.setGoodWithDogs(dto.isGoodWithDogs());
-        pet.setGoodWithCats(dto.isGoodWithCats());
-        pet.setLiked(dto.isLiked());
+        Pet patica = new Pet();
+        patica.setProfileImage(fileSaver.saveFile(dto.getProfileImage()));
+        patica.setImageCarousel1(fileSaver.saveFile(dto.getImageCarousel1()));
+        patica.setImageCarousel2(fileSaver.saveFile(dto.getImageCarousel2()));
+        patica.setImageCarousel3(fileSaver.saveFile(dto.getImageCarousel3()));
+        patica.setName(dto.getName());
+        patica.setGender(dto.getGender());
+        patica.setSize(dto.getSize());
+        patica.setBirthDate(dto.getBirthDate());
+        patica.setSpecies(dto.getSpecies());
+        patica.setDescription(dto.getDescription());
+        patica.setGoodWithKids(dto.isGoodWithKids());
+        patica.setGoodWithDogs(dto.isGoodWithDogs());
+        patica.setGoodWithCats(dto.isGoodWithCats());
+        patica.setLiked(dto.isLiked());
 
         Shelter shelter = new Shelter();
         shelter.setId(dto.getShelterId());
-        pet.setShelter(shelter);
-        return pet;
+        patica.setShelter(shelter);
+        return patica;
     }
-
-
-public Pet updateEntity(Pet pet, UpdatePetRequest dto) throws IOException {
-
+    public Pet updateEntity(Pet pet, UpdatePetRequest dto) throws IOException {
         if (dto.getProfileImage() != null && !dto.getProfileImage().isEmpty()) {
             pet.setProfileImage(fileSaver.saveFile(dto.getProfileImage()));
         }
@@ -74,4 +71,5 @@ public Pet updateEntity(Pet pet, UpdatePetRequest dto) throws IOException {
 
         return pet;
     }
+
 }
