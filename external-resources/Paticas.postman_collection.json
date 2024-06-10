@@ -314,7 +314,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/pets/shelter/3?page=0&size=5&sort=desc",
+							"raw": "{{BasePathApiReal}}/api/pets/shelter/10?page=0&size=12&sort=desc",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
@@ -322,7 +322,7 @@
 								"api",
 								"pets",
 								"shelter",
-								"3"
+								"10"
 							],
 							"query": [
 								{
@@ -331,7 +331,7 @@
 								},
 								{
 									"key": "size",
-									"value": "5"
+									"value": "12"
 								},
 								{
 									"key": "sort",
@@ -353,61 +353,56 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/profileImage.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel1_3.jpg"
 								},
 								{
 									"key": "imageCarousel1",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel1.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel1_3.jpg"
 								},
 								{
 									"key": "imageCarousel2",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel2.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel1_10.jpg"
 								},
 								{
 									"key": "imageCarousel3",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel3.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel1_3.jpg"
 								},
 								{
 									"key": "name",
-									"value": "Carmilla",
-									"type": "text"
-								},
-								{
-									"key": "location",
-									"value": "My house",
+									"value": "paco",
 									"type": "text"
 								},
 								{
 									"key": "gender",
-									"value": "Female",
+									"value": "male",
 									"type": "text"
 								},
 								{
 									"key": "size",
-									"value": "12",
+									"value": "3",
 									"type": "text"
 								},
 								{
 									"key": "birthDate",
-									"value": "2015-05-04",
+									"value": "15-08-2012",
 									"type": "text"
 								},
 								{
 									"key": "species",
-									"value": "My species",
+									"value": "Perro",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "My description",
+									"value": "Dean es un perro que se atreve con todo lo que la vida le presente. Le encanta explorar el aire libre y jugar con pelotas y juguetes.",
 									"type": "text"
 								},
 								{
 									"key": "goodWithKids",
-									"value": "false",
+									"value": "true",
 									"type": "text"
 								},
 								{
@@ -422,7 +417,12 @@
 								},
 								{
 									"key": "shelterId",
-									"value": "3",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "liked",
+									"value": "true",
 									"type": "text"
 								}
 							]
@@ -451,56 +451,51 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/profileImage.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel1_10.jpg"
 								},
 								{
 									"key": "imageCarousel1",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel2.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel1_10.jpg"
 								},
 								{
 									"key": "imageCarousel2",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel1.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel2_10.jpg"
 								},
 								{
 									"key": "imageCarousel3",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel3.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/carousel3_10.jpg"
 								},
 								{
 									"key": "name",
-									"value": "Carmilla",
-									"type": "text"
-								},
-								{
-									"key": "location",
-									"value": "My house",
+									"value": "Leo",
 									"type": "text"
 								},
 								{
 									"key": "gender",
-									"value": "Female",
+									"value": "male",
 									"type": "text"
 								},
 								{
 									"key": "size",
-									"value": "12",
+									"value": "1",
 									"type": "text"
 								},
 								{
 									"key": "birthDate",
-									"value": "2015-05-04",
+									"value": "04-05-2020",
 									"type": "text"
 								},
 								{
 									"key": "species",
-									"value": "My species",
+									"value": "Perro",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "My description",
+									"value": "Leo es un cachorro lleno de energía y entusiasmo, siempre curioso. Siempre dispuesto a descubrir algo nuevo.",
 									"type": "text"
 								},
 								{
@@ -520,20 +515,25 @@
 								},
 								{
 									"key": "shelterId",
-									"value": "1",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "liked",
+									"value": "true",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/pets/3",
+							"raw": "{{BasePathApiReal}}/api/pets/228",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"pets",
-								"3"
+								"228"
 							]
 						}
 					},
@@ -669,14 +669,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/shelters/2",
+							"raw": "{{BasePathApiReal}}/api/shelters/10",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"shelters",
-								"2"
+								"10"
 							]
 						}
 					},
@@ -716,7 +716,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"profileImage\": \"Fake image re re modified\",\r\n  \"name\": \"Shelter 2 modified\",\r\n  \"location\": \"Location 2 modified\",\r\n  \"description\": \"Description 2 modified\"\r\n}",
+							"raw": "{\r\n  \"profileImage\": \"Fake image re re modified\",\r\n  \"name\": \"Paticas Unidas\",\r\n  \"location\": \"Murcia\",\r\n  \"description\": \"Description 2 modified\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -724,14 +724,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/shelters/1",
+							"raw": "{{BasePathApiReal}}/api/shelters/10",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"shelters",
-								"1"
+								"10"
 							]
 						}
 					},
@@ -867,14 +867,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/volunteers/4",
+							"raw": "{{BasePathApiReal}}/api/volunteers/1",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"volunteers",
-								"4"
+								"1"
 							]
 						}
 					},
@@ -886,7 +886,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/volunteers/shelter/3?page=0&size=5&sort=desc",
+							"raw": "{{BasePathApiReal}}/api/volunteers/shelter/10?page=0&size=5&sort=desc",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
@@ -894,7 +894,7 @@
 								"api",
 								"volunteers",
 								"shelter",
-								"3"
+								"10"
 							],
 							"query": [
 								{
@@ -925,21 +925,21 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/profileImage.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/profile_image_9.jpg"
 								},
 								{
 									"key": "fullName",
-									"value": "Pablo Muñoz Martínez",
+									"value": "Sofía García",
 									"type": "text"
 								},
 								{
 									"key": "phone",
-									"value": "123456789",
+									"value": "676543219",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "my@email.com",
+									"value": "sofia@example.com",
 									"type": "text"
 								},
 								{
@@ -949,7 +949,7 @@
 								},
 								{
 									"key": "shelterId",
-									"value": "3",
+									"value": "10",
 									"type": "text"
 								}
 							]
@@ -978,11 +978,11 @@
 								{
 									"key": "profileImage",
 									"type": "file",
-									"src": "/Users/mychemical_eli/IdeaProjects/guame/external-resources/optimized-images-for-testing/imageCarousel3.png"
+									"src": "/Users/mychemical_eli/Desktop/TFG/Repos/API/paticas-api/external-resources/optimized-images-for-testing/profile_image_9.jpg"
 								},
 								{
 									"key": "fullName",
-									"value": "Pablo Muñoz Martínez RE",
+									"value": "Elizabeth prueba",
 									"type": "text"
 								},
 								{
@@ -1014,14 +1014,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{BasePathApiReal}}/api/volunteers/4",
+							"raw": "{{BasePathApiReal}}/api/volunteers/13",
 							"host": [
 								"{{BasePathApiReal}}"
 							],
 							"path": [
 								"api",
 								"volunteers",
-								"4"
+								"13"
 							]
 						}
 					},
